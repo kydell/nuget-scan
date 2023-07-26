@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>ProgLeasing.Legacy.MicroEsign</AssemblyName>
+    <RootNamespace>ProgLeasing.Legacy.MicroEsign</RootNamespace>
+    <VersionSuffix>$(VersionSuffix)</VersionSuffix>
+    <Version>1.2.5</Version>
+    <Version Condition=" '$(VersionSuffix)' != '' ">$(Version)-$(VersionSuffix)</Version>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <DocumentationFile>C:\Code\progleasing.legacy.microesign\src\ProgLeasing.Legacy.MicroEsign\ProgLeasing.Legacy.MicroEsign.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.Publisher.ApplicationInsights" Version="6.0.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="6.0.5" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="6.0.5" />
+    <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.3" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+    <PackageReference Include="ProgLeasing.System.FeatureFlag.LaunchDarkly" Version="3.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="ProgLeasing.System.Logging.Correlator" Version="6.1.2" />
+    <PackageReference Include="ProgLeasing.System.Logging.Serilog" Version="6.1.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProgLeasing.Legacy.MicroEsign.Business\ProgLeasing.Legacy.MicroEsign.Business.csproj" />
+    <ProjectReference Include="..\ProgLeasing.Legacy.MicroEsign.ServiceContract\ProgLeasing.Legacy.MicroEsign.ServiceContract.csproj" />
+  </ItemGroup>
+
+</Project>
